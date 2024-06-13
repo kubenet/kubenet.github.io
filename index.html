@@ -3,37 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telegram Mini App</title>
+    <title>Personal Expenses Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .chart-container {
+            width: 100%;
+            margin: 0 auto 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        canvas {
+            width: 100% !important;
+            height: auto !important;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Telegram Mini App!</h1>
-    <button id="sendMessageButton">Send Message</button>
+    <h1>Personal Expenses Tracker</h1>
+    <div class="chart-container">
+        <h2>Expenses by Category</h2>
+        <canvas id="categoryChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <h2>Monthly Expenses Statistics</h2>
+        <canvas id="monthlyChart"></canvas>
+    </div>
 
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        Telegram.WebApp.ready();
-        
-        document.getElementById('sendMessageButton').addEventListener('click', function() {
-            Telegram.WebApp.sendData("Hello, Telegram!");
+        // Sample data
+        const expenseCategories = ['Food', 'Rent', 'Utilities', 'Entertainment', 'Others'];
+        const expenseData = [500, 1500, 300, 200, 100];
+
+        const monthlyLabels = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        const monthlyData = {
+            'Food': [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160],
+            'Rent': [500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500],
+            'Utilities': [30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30],
+            'Entertainment': [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20],
+            'Others': [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+        };
+
+        // Pie chart for expenses by category
+        const ctxCategory = document.getElementById('categoryChart').getContext('2d');
+        const categoryChart = new Chart(ctxCategory, {
+            type: 'pie',
+            data: {
+                labels: expenseCategories,
+                datasets: [{
+                    data: expenseData,
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF']
+                }]
+            },
+            options: {
+                responsive: true
+            }
         });
 
-        Telegram.WebApp.onEvent('data', function(data) {
-            fetch('/webhook', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    chat_id: Telegram.WebApp.initDataUnsafe.user.id,
-                    message: data
-                })
-            }).then(response => response.json())
-              .then(data => {
-                  console.log('Success:', data);
-              }).catch((error) => {
-                  console.error('Error:', error);
-              });
+        // Bar chart for monthly expenses statistics
+        const ctxMonthly = document.getElementById('monthlyChart').getContext('2d');
+        const datasets = [];
+        for (const [key, value] of Object.entries(monthlyData)) {
+            datasets.push({
+                label: key,
+                data: value,
+                backgroundColor: getRandomColor()
+            });
+        }
+
+        const monthlyChart = new Chart(ctxMonthly, {
+            type: 'bar',
+            data: {
+                labels: monthlyLabels,
+                datasets: datasets
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        stacked: true
+                    },
+                    y: {
+                        stacked: true
+                    }
+                }
+            }
         });
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
     </script>
 </body>
 </html>
