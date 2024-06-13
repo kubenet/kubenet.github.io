@@ -1,17 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title> Hello site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Mini App</title>
 </head>
 <body>
-<H1>Hello World!</H1>
+    <h1>Welcome to Telegram Mini App!</h1>
+    <button id="sendMessageButton">Send Message</button>
 
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        Telegram.WebApp.ready();
+        
+        document.getElementById('sendMessageButton').addEventListener('click', function() {
+            Telegram.WebApp.sendData("Hello, Telegram!");
+        });
 
-
-<H1>Hello World!</H1>
-<H2>Вторая строка</H2>
-<h3>Третья строка моего сайта</h3>
-<img src="https://vscode.ru/wp-content/uploads/2017/11/hello-world.jpg">
-
+        Telegram.WebApp.onEvent('data', function(data) {
+            fetch('/webhook', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    chat_id: Telegram.WebApp.initDataUnsafe.user.id,
+                    message: data
+                })
+            }).then(response => response.json())
+              .then(data => {
+                  console.log('Success:', data);
+              }).catch((error) => {
+                  console.error('Error:', error);
+              });
+        });
+    </script>
 </body>
 </html>
