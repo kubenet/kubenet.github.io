@@ -79,6 +79,27 @@
             color: #4CAF50;
             text-decoration: none;
         }
+        .game-container {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .game-container input {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .game-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -94,8 +115,14 @@
         <div id="products1"></div>
     </div>
     <div class="tab-content" id="tab-products2">
-        <h2>Products from API 2</h2>
-        <div id="products2"></div>
+        <h2>Mini Game: Guess the Number</h2>
+        <div class="game-container">
+            <p>I'm thinking of a number between 1 and 100.</p>
+            <p>Can you guess what it is?</p>
+            <input type="number" id="guessInput" placeholder="Enter your guess">
+            <button onclick="checkGuess()">Submit</button>
+            <p id="resultMessage"></p>
+        </div>
     </div>
 
     <div class="menu">
@@ -108,8 +135,8 @@
             <div>Products 1</div>
         </div>
         <div class="menu-item" onclick="showTab('tab-products2')">
-            <i class="fas fa-shopping-bag"></i>
-            <div>Products 2</div>
+            <i class="fas fa-gamepad"></i>
+            <div>Mini Game</div>
         </div>
     </div>
 
@@ -217,6 +244,26 @@
         // Replace 'API_URL_1' and 'API_URL_2' with actual URLs of the APIs
         fetchProducts('https://fakestoreapi.com/products', 'products1');
         fetchProducts('https://dummyjson.com/products', 'products2');
+
+        // Mini Game: Guess the Number
+        const randomNumber = Math.floor(Math.random() * 100) + 1;
+        let attempts = 0;
+
+        function checkGuess() {
+            const guess = document.getElementById('guessInput').value;
+            const resultMessage = document.getElementById('resultMessage');
+            attempts++;
+            if (guess == randomNumber) {
+                resultMessage.textContent = `Congratulations! You guessed it in ${attempts} attempts. The number was ${randomNumber}.`;
+                resultMessage.style.color = 'green';
+            } else if (guess > randomNumber) {
+                resultMessage.textContent = 'Too high! Try again.';
+                resultMessage.style.color = 'red';
+            } else if (guess < randomNumber) {
+                resultMessage.textContent = 'Too low! Try again.';
+                resultMessage.style.color = 'red';
+            }
+        }
     </script>
 </body>
 </html>
