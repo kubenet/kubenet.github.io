@@ -203,11 +203,11 @@
                 const productElement = document.createElement('div');
                 productElement.className = 'product';
                 productElement.innerHTML = `
-                    <img src="${product.image}" alt="${product.name}">
+                    <img src="${product.image}" alt="${product.title}">
                     <div class="product-info">
-                        <h3>${product.name}</h3>
-                        <p>Price: ${product.price}</p>
-                        <a href="${product.link}" target="_blank">Order</a>
+                        <h3>${product.title}</h3>
+                        <p>Price: $${product.price}</p>
+                        <a href="${product.url}" target="_blank">Order</a>
                     </div>
                 `;
                 container.appendChild(productElement);
@@ -215,8 +215,8 @@
         }
 
         // Replace 'API_URL_1' and 'API_URL_2' with actual URLs of the APIs
-        fetchProducts('API_URL_1', 'products1');
-        fetchProducts('API_URL_2', 'products2');
+        fetchProducts('https://fakestoreapi.com/products', 'products1');
+        fetchProducts('https://dummyjson.com/products', 'products2');
     </script>
 </body>
 </html>
