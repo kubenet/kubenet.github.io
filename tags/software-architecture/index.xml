@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software-Architecture | </title>
+    <link>http://localhost:1313/tags/software-architecture/</link>
+      <atom:link href="http://localhost:1313/tags/software-architecture/index.xml" rel="self" type="application/rss+xml" />
+    <description>Software-Architecture</description>
+    <generator>HugoBlox Kit (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_eee4a95885829ab2.png</url>
+      <title>Software-Architecture</title>
+      <link>http://localhost:1313/tags/software-architecture/</link>
+    </image>
+    
+    <item>
+      <title>Объектно-ориентированный анализ алгоритма управления и проектирование архитектуры программного обеспечения для климатической экранированной ТЕМ-камеры</title>
+      <link>http://localhost:1313/publications/tem-oa-analysis/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publications/tem-oa-analysis/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>http://localhost:1313/</link>
+      <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <description></description>
+    <generator>HugoBlox Kit (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_eee4a95885829ab2.png</url>
+      <title></title>
+      <link>http://localhost:1313/</link>
+    </image>
+    
+    <item>
+      <title>Системы помощи водителю (ADAS) и мониторинг транспорта</title>
+      <link>http://localhost:1313/projects/research-projects/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/research-projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Certifications &amp; Training</title>
+      <link>http://localhost:1313/certifications/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Experience</title>
+      <link>http://localhost:1313/experience/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/experience/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Grants, Research &amp; Funding</title>
+      <link>http://localhost:1313/grants/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/grants/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Teaching &amp; Mentoring</title>
+      <link>http://localhost:1313/teaching/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/teaching/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Образовательная программа «Компьютерное зрение и ИИ»</title>
+      <link>http://localhost:1313/projects/cv-ai-education/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/cv-ai-education/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Программно-аппаратный комплекс «ЭМтест»</title>
+      <link>http://localhost:1313/projects/emtest/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/emtest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Разработка программного обеспечения для моделирования радиоэлектронных средств с учётом электромагнитной совместимости в ТУСУР</title>
+      <link>http://localhost:1313/publications/emc-modeling-software/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publications/emc-modeling-software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Design of expert system elements for solving electromagnetic compatibility problems</title>
+      <link>http://localhost:1313/publications/emc-expert-system/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publications/emc-expert-system/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Транспортные системы с компьютерным зрением</title>
+      <link>http://localhost:1313/projects/transport-cv/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/transport-cv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Designing Multiple PID Controllers Based on an FPGA for Controlling the Temperature of TEM-cell Surfaces</title>
+      <link>http://localhost:1313/publications/fpga-pid-controllers/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publications/fpga-pid-controllers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>IoT-система «Монитор холода»</title>
+      <link>http://localhost:1313/projects/cold-monitor/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/cold-monitor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Объектно-ориентированный анализ алгоритма управления и проектирование архитектуры программного обеспечения для климатической экранированной ТЕМ-камеры</title>
+      <link>http://localhost:1313/publications/tem-oa-analysis/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publications/tem-oa-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Diagnostic Service by Means of a Real-Time Operating System for Environmental Shielded TEM-chamber</title>
+      <link>http://localhost:1313/publications/tem-diagnostic-service/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publications/tem-diagnostic-service/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Климатическая экранированная ТЕМ-камера</title>
+      <link>http://localhost:1313/projects/tem-chamber/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/tem-chamber/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software under control of a real-time operating system for environmental shielded TEM-chamber</title>
+      <link>http://localhost:1313/publications/tem-rtos-software/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publications/tem-rtos-software/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

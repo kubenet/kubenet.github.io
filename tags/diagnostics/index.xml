@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Diagnostics | </title>
+    <link>http://localhost:1313/tags/diagnostics/</link>
+      <atom:link href="http://localhost:1313/tags/diagnostics/index.xml" rel="self" type="application/rss+xml" />
+    <description>Diagnostics</description>
+    <generator>HugoBlox Kit (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_eee4a95885829ab2.png</url>
+      <title>Diagnostics</title>
+      <link>http://localhost:1313/tags/diagnostics/</link>
+    </image>
+    
+    <item>
+      <title>Diagnostic Service by Means of a Real-Time Operating System for Environmental Shielded TEM-chamber</title>
+      <link>http://localhost:1313/publications/tem-diagnostic-service/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publications/tem-diagnostic-service/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
